@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGC</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="f1styles.css">
+</head>
+<body>
+
+    <header>
+        <h1> Autonomous Garbage Collector 🤖 </h1>
+    </header>
+
+    <section class="project-container">
+        <div class="project-content">
+            <div class="project-image">
+                <img src="images/AGC3.jpeg" alt="F1 RC Car Render">
+            </div>
+            <div class="project-info">
+                <h2>Project Overview</h2>
+                <p>
+                    The AGC was created to automate the tediius task of picking up garbage. It moves like any car or vehicle would with an incorperated rear wheel drive and front wheel turning system.
+                    However, the AGC has a cage (mouth) at the front that will cage any garbage it detects. The AGC would drive around a given area, trying to find garbage. 
+                    If its infrared sensor attached at the front of the mouth detected an object, the AGC would consume it, then keep moving until its battery ran out (we gave it a time of 2 minutes) and then it would determine where it was in its pre-defined coordinate system and return to its origin.
+
+                </p>
+            </div>
+
+        <div class="project-image">
+            <img src="images/AGC2.jpeg" alt="Aerodynamics Simulation">
+        </div>
+
+        <div class="project-info">
+            <h2> Mechanical Design </h2>
+
+            <b>Drive System: </b>
+            <br> Rear-wheel drive with a front cage for collecting and storing garbage. <br> <br>
+            <b>Sensors: </b> <br>
+            Ultrasonic sensor to detect garbage. <br>
+            Color sensor to identify red paper for origin. <br>
+            Gyro sensor mounted on the chassis for stability.<br> <br>
+            <b>Motors:</b> <br>
+            Drive Train: Two large motors—one vertically for rear wheels, one horizontally for front axle steering. <br>
+            Cage Mechanism: Two medium motors with geared shafts for increased torque to open/close the cage. <br> <br>
+            <b>Operation: </b> <br>
+            Stops when the infrared sensor detects garbage. <br>
+            Opens the cage, moves forward slightly, then closes to trap garbage. <br>
+            Repeats until the "battery runs low" (2-minute timer), then returns to the charging station. <br>
+            <br> 
+
+            <div class="project-image">
+                <img src="images/AGC4.jpeg" alt="Aerodynamics Simulation">
+            </div>
+            <br>
+
+            <h2>Software and Sensors</h2>
+            <p>
+
+                 <b>Key Functions: </b> <br> <br>
+                 <b>turnCar: </b> Adjusts the AGC's angle based on its position. <br> <br>
+                 <b>return_to_origin: </b> Calculates location and directs AGC back to its origin. <br> <br>
+                 <b>consume: </b> Uses the infrared sensor to detect and "eat" garbage if an object is within 8 cm. <br> <br>
+                 <b>dump: </b> Opens the cage, moves backward to release garbage, then closes. <br> <br>
+                 <b>stuck: </b> Detects if the AGC is immobile using its encoder; displays "Help, stuck!" until manually reset. <br> <br>
+            </p>
+
+            <div class="project-image">
+                <img src="images/AGC5.JPG" alt="Aerodynamics Simulation">
+            </div>
+
+            <h2> Next Steps </h2>
+            <p> <b> Mechanical Design Improvements: </b> <br> <br>
+                <b>Wheel Alignment: </b>Better front and rear wheel alignment to reduce drifting, the AGC kept drifting sideways when its supposed to travel in straight lines. <br>
+                <b>Rigid Drive Structure:</b> Strengthening the drive system (adding more supports and extrusions) to minimize misalignment from unreliable Lego connections. <br>
+                <b>EV3 Brick Mounting: </b> Centering the EV3 brick to ensure even weight distribution.</p> <br>
+
+                <p> <b> Software Design Improvements:</b> <br> <br>
+                    <b>Adaptive Steering Correction: </b> Implement a feedback system using the gyro sensor to correct wheel alignment drift dynamically. This would solve many issues, especially with returning to its origin, as the AGC often returned to the wrong spot due to drift. <br>
+                    <b>Improved "Stuck" Detection: </b> Instead of waiting for manual intervention, the AGC could attempt an automatic recovery sequence (e.g., reversing, turning, or retrying the movement).
+            </p>
+
+            <div class="project-image">
+                <img src="images/AGC6.JPG" alt="Aerodynamics Simulation">
+            </div>
+            
+            <h2> Quick Demo Video! </h2>
+            <p> (we programmed it to do a victory lap at the end for the demo</p>
+            <div class="project-image">
+                <img src="images/AGC vid.MP4" alt="Aerodynamics Simulation">
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <a href="index.html" class="btn-back">← Back to Portfolio</a>
+    </footer>
+
+</body>
+</html>
